@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  margin: 0;
+  font-family: 'arial', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height:100%;
+  body {
+    height:100%;
+    
+    .Base {}
+
+    #root {
+      min-height:100px;
+      height:100%;
+    }
+
+    .timerView {
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      input[type=number] {
+        -moz-appearance: textfield;
+      }
+      p {
+        font-weight: bold;
+      }
+      input {
+        height:40px;
+        border:solid 1px #000; 
+        font-size: 15px;
+        padding:15px 10px;
+        margin:0px 10px;
+        color: #888;
+        max-width:130px;
+        border-radius: 0px !important; 
+        outline: none !important;
+      }
+      .countDownInput {
+        button {
+          background: #54b8a1;
+          height: 40px;
+          padding:0px 15px;
+          line-height: 42px;
+          text-transform: uppercase;
+          font-weight: bold;
+          color: #fff;
+          &:active, &:hover {
+            background-color: #318672;
+          }
+          &:disabled{
+            background-color: #ccc;
+            cursor: not-allowed;
+          }
+        }
+      }
+      
+
+      h4 {
+        font-weight: bold;
+        font-size: 24px;
+        font-style: italic;
+      }
+      h1 {
+        font-size: 145px;
+        font-weight: bold;
+      }
+    }
+  }
+
+  @keyframes blink {
+    0%   {opacity:0}
+    100% {opacity:1;}
+  }
+
+  .blink {
+    animation-name: blink;
+    animation-duration: 500ms;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+  }
+}
+
+
+
